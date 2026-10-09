@@ -2,12 +2,12 @@
 
 A responsive product-story concept for Priya Foods, with an animated flavour carousel, product detail scenes, editorial photography, and links to Priya Foods' official store.
 
-> **Adaptation made by [sakshamfit](https://github.com/sakshamfit).** This repository incorporates and adapts the upstream project by [Gireesh (`gireeshkumarreddy/Priya`)](https://github.com/gireeshkumarreddy/Priya); it is not a claim of sole authorship. This is an unofficial website concept, not a Priya Foods product or official store.
+> **Made by [Saksham Fit](https://github.com/sakshamfit).** This repository incorporates and adapts the upstream project by [Gireesh (`gireeshkumarreddy/Priya`)](https://github.com/gireeshkumarreddy/Priya); it is not a claim of sole authorship. This is an unofficial website concept, not a Priya Foods product or official store.
 
 ## Credits and provenance
 
 - The original implementation and reference recreation are credited to Gireesh in the [upstream repository](https://github.com/gireeshkumarreddy/Priya). The upstream material is included with permission for this adaptation.
-- Sakshamfit's contribution here is the project integration, repository documentation, and adaptation credit in the site footer.
+- Saksham Fit's contribution here is the project integration, repository documentation, and the "Made by Saksham Fit" credit in the site footer.
 - Priya Foods names, logos, product packaging, and food imagery belong to their respective owners. Permission to adapt the upstream project should not be treated as a blanket license for unrelated reuse of those assets or marks.
 - The upstream project does not include a repository-level `LICENSE` file, so no new blanket license is asserted here. Check with the relevant rights holders before reusing this code or its assets elsewhere.
 
@@ -39,6 +39,14 @@ corepack pnpm build
 corepack pnpm start
 ```
 
+## Deployment
+
+The site deploys to Vercel as a static export. `vercel.json` sets the framework to "Other" (so Vercel does not use its Next.js builder) and serves `dist/client`. When `VERCEL` is set during the build, `next.config.ts` enables `output: "export"`, which prerenders `/` to static HTML. Other hosts keep the default build.
+
+```sh
+VERCEL=1 corepack pnpm build   # produces dist/client/index.html
+```
+
 ## Attribution
 
-**Site adaptation made by Sakshamfit.** Original project: [gireeshkumarreddy/Priya](https://github.com/gireeshkumarreddy/Priya), by Gireesh. Priya Foods branding and assets remain the property of their respective owners.
+**Made by Saksham Fit.** Original project: [gireeshkumarreddy/Priya](https://github.com/gireeshkumarreddy/Priya), by Gireesh. Priya Foods branding and assets remain the property of their respective owners.
